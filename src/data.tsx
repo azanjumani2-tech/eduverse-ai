@@ -14,6 +14,7 @@ export type Lesson = {
   subject: string
   duration: string
   progress: number
+  body: string[]
 }
 
 export const lessons: Lesson[] = [
@@ -22,18 +23,33 @@ export const lessons: Lesson[] = [
     subject: 'Biology',
     duration: '12 min',
     progress: 65,
+    body: [
+      'Your body is made of trillions of cells, and every cell is a tiny living factory. Each cell takes in food and oxygen, releases energy, gets rid of waste, and can divide to make new cells. Understanding the cell is the first step to understanding the whole human body.',
+      'The nucleus is the control centre: it holds DNA, the instructions for making proteins. The cytoplasm is the jelly where most chemical reactions happen, and the cell membrane controls what enters and leaves. The mitochondria release energy from glucose so the cell can work.',
+      'Plant cells have three extra parts that animal cells do not: a strong cell wall, chloroplasts that trap sunlight for photosynthesis, and a large vacuole filled with cell sap. Open the 3D Learning section and tap each part of the animal cell to see what it does.',
+    ],
   },
   {
     title: "Newtons Laws of Motion",
     subject: 'Physics',
     duration: '18 min',
     progress: 40,
+    body: [
+      'Motion seems simple — things move or they stop — but Isaac Newton found three rules behind it all. The first law, inertia, says a body keeps doing what it is doing unless a force acts on it. A book stays on a table until you push it, and a ball keeps rolling until friction slows it down.',
+      'The second law says force equals mass times acceleration. The same push gives a light trolley a big acceleration and a heavy trolley a small one. Double the force and you double the acceleration — that is why a small car speeds up faster than a loaded truck with the same engine.',
+      'The third law says every action has an equal and opposite reaction. You push back on the ground and the ground pushes you forward. A rocket pushes hot gas downwards and the gas pushes the rocket upwards. Try the Motion and Gravity model in 3D Learning to see gravity at work.',
+    ],
   },
   {
     title: 'Chemical Bonding Basics',
     subject: 'Chemistry',
     duration: '15 min',
     progress: 80,
+    body: [
+      'Atoms join together because they want a full outer shell of electrons, and the forces that hold them together are called chemical bonds. There are two main kinds: ionic bonds, where electrons are given away, and covalent bonds, where electrons are shared.',
+      'In an ionic bond, a metal atom gives an electron to a non-metal atom. Both become charged particles called ions, and opposite charges attract — this is how sodium and chlorine become common salt. In a covalent bond, atoms share pairs of electrons: two hydrogen atoms share to make H2, and oxygen shares with two hydrogens to make water.',
+      'The type of bond changes how a substance behaves. Salt forms hard crystals that dissolve in water, while water itself is a covalent molecule that is liquid at room temperature. Open the Molecule Builder in Virtual Labs and build water, carbon dioxide and methane yourself.',
+    ],
   },
 ]
 
@@ -42,6 +58,7 @@ export type Subject = {
   detail: string
   color: string
   icon: ReactNode
+  overview: string
 }
 
 export const subjects: Subject[] = [
@@ -50,36 +67,42 @@ export const subjects: Subject[] = [
     detail: 'Cells, human body and living things',
     color: 'green',
     icon: <Microscope size={18} />,
+    overview: 'Biology is the study of living things — from tiny cells to whole ecosystems. In this subject you will learn how cells work, how plants make food, how the human heart pumps blood, and how traits pass from parents to children. These ideas explain your own body and the world around you. Start with Cell Structure, then move through Photosynthesis, the Heart, and Genetics.',
   },
   {
     name: 'Physics',
     detail: 'Motion, energy and forces',
     color: 'blue',
     icon: <Atom size={18} />,
+    overview: 'Physics is the study of matter, energy and how things move. You will learn Newton\'s laws of motion, what energy and work really mean, how light reflects from mirrors, and how electricity flows in a circuit. Physics explains everything from a falling ball to the lights in your home. Start with Newton\'s Laws, then try Energy, Light and Electricity.',
   },
   {
     name: 'Chemistry',
     detail: 'Atoms, molecules and reactions',
     color: 'violet',
     icon: <FlaskConical size={18} />,
+    overview: 'Chemistry is the study of what things are made of and how they change. You will learn about atoms and molecules, the bonds that hold them together, acids and bases, and the periodic table that organises every element. Chemistry explains cooking, cleaning, medicines and the air you breathe. Start with Atoms and Molecules, then Chemical Bonding, Acids and Bases, and the Periodic Table.',
   },
   {
     name: 'Mathematics',
     detail: 'Algebra, geometry and problem solving',
     color: 'orange',
     icon: <Calculator size={18} />,
+    overview: 'Mathematics is the language of patterns and numbers. Here you will practise algebra, fractions and decimals, the geometry of triangles and circles, and ratios and percentages. These skills are used every day — in shopping, in exams, and in science. Start with Algebra Basics, then Fractions, Geometry and Ratios.',
   },
   {
     name: 'English',
     detail: 'Reading, grammar and writing',
     color: 'cyan',
     icon: <BookOpen size={18} />,
+    overview: 'English is about reading, writing and speaking clearly. You will practise verb tenses, reading comprehension, essay writing and building a strong vocabulary. Good English helps you in every other subject, because every subject needs you to read questions carefully and explain your answers. Start with Tenses, then Reading, Essay Writing and Vocabulary.',
   },
   {
     name: 'Computer Science',
     detail: 'Programming and digital skills',
     color: 'pink',
     icon: <Cpu size={18} />,
+    overview: 'Computer Science is about how computers work and how to make them do new things. You will learn the parts of a computer, the basics of programming, how to stay safe online, and how computers store everything as binary numbers. These skills are useful in almost every job today. Start with What is a Computer, then Programming, Internet Safety and Binary Numbers.',
   },
 ]
 
@@ -87,6 +110,7 @@ export type Chapter = {
   id: string
   title: string
   summary: string
+  body: string[]
 }
 
 export const chapters: Record<string, Chapter[]> = {
@@ -96,24 +120,44 @@ export const chapters: Record<string, Chapter[]> = {
       title: 'Cell Structure',
       summary:
         'Every living thing is made of cells. Learn the parts of a cell: nucleus, cytoplasm, cell membrane, mitochondria and vacuole, and what each part does.',
+      body: [
+        'Every living thing, from a tiny bacterium to a blue whale, is made of cells. A cell is the smallest unit of life: it can take in food, release energy, grow and divide to make new cells. Some living things have only one cell, while your body has trillions of them working together.',
+        'Inside an animal cell, the nucleus is the control centre. It holds DNA, the instructions that tell the cell how to make proteins and how to behave. Around it is the cytoplasm, a jelly where most of the cell\'s chemical reactions happen, and the cell membrane, a thin skin that controls what enters and leaves.',
+        'The mitochondria are the powerhouses of the cell: they release energy from glucose during respiration. Plant cells have three extra parts — a strong cell wall, chloroplasts that trap sunlight for photosynthesis, and a large vacuole filled with cell sap that keeps the cell firm.',
+      ],
     },
     {
       id: 'bio-2',
       title: 'Photosynthesis',
       summary:
         'How green plants make their own food using sunlight, water and carbon dioxide, and why oxygen is released in the process.',
+      body: [
+        'Photosynthesis is how green plants make their own food. A plant takes in carbon dioxide from the air through tiny holes in its leaves called stomata, and water from the soil through its roots. Using sunlight, it joins them together to make glucose, a sugar that stores energy.',
+        'The reaction happens in chloroplasts, tiny green structures inside leaf cells. The green pigment chlorophyll absorbs light energy, mostly red and blue light. The word equation is simple: carbon dioxide + water gives glucose + oxygen, with sunlight providing the energy.',
+        'Oxygen is released as a by-product — this is the oxygen we breathe. The glucose gives the plant energy to grow, and extra glucose is stored as starch in roots and seeds. Without photosynthesis there would be almost no food chains and no free oxygen in the air.',
+      ],
     },
     {
       id: 'bio-3',
       title: 'Human Heart and Circulation',
       summary:
         'The heart pumps blood around the body through arteries, veins and capillaries, carrying oxygen and food to every cell.',
+      body: [
+        'Your heart is about the size of your fist and beats around 70 times every minute, pumping blood around your body day and night without ever stopping. It is really two pumps joined together: the right side sends blood to the lungs, and the left side sends it to the whole body.',
+        'The heart has four chambers. The two upper chambers are the atria, which receive blood, and the two lower chambers are the ventricles, which pump it out. The right ventricle pumps blood low in oxygen to the lungs, where it picks up oxygen and drops off carbon dioxide.',
+        'The left ventricle is the strongest chamber: it pumps oxygen-rich blood through the aorta to every organ. Blood travels in arteries away from the heart, in veins back towards it, and in tiny capillaries where oxygen and food pass into the tissues. Valves inside the heart stop blood flowing backwards.',
+      ],
     },
     {
       id: 'bio-4',
       title: 'Genetics and Inheritance',
       summary:
         'How traits pass from parents to children through genes and chromosomes, and why children resemble their parents.',
+      body: [
+        'Genetics is the study of how traits pass from parents to children. The instructions for building a living thing are carried in genes, sections of DNA that sit on thread-like structures called chromosomes inside the nucleus of every cell.',
+        'Humans have 46 chromosomes in most cells, in 23 pairs — one set from the mother and one from the father. Each gene comes in versions called alleles. Some alleles are dominant and show their effect even with one copy, while recessive alleles only show when a child gets two copies.',
+        'This is why children resemble their parents but are never identical to them: each child gets a different mix of genes. Small differences in genes also explain eye colour, height and many other traits. Understanding genetics helps doctors explain inherited diseases and helps farmers breed better crops.',
+      ],
     },
   ],
   Physics: [
@@ -122,24 +166,44 @@ export const chapters: Record<string, Chapter[]> = {
       title: "Newtons Laws of Motion",
       summary:
         'The three laws that explain how forces change motion: inertia, force equals mass times acceleration, and action and reaction.',
+      body: [
+        'Isaac Newton described three laws that explain how forces change motion. The first law is about inertia: a body stays still, or keeps moving at the same speed in a straight line, unless an unbalanced force acts on it. A book stays on a table until you push it, and a rolling ball slows down only because friction pushes against it.',
+        'The second law links force, mass and acceleration: force = mass times acceleration. Push a light trolley and a heavy trolley with the same force, and the light one accelerates faster. Double the force and the acceleration doubles too.',
+        'The third law says every action has an equal and opposite reaction. When you walk, you push backwards on the ground and the ground pushes you forwards. A rocket pushes hot gas down, and the gas pushes the rocket up with the same size of force in the opposite direction.',
+      ],
     },
     {
       id: 'phy-2',
       title: 'Energy and Work',
       summary:
         'What energy is, its forms such as kinetic and potential energy, and how work is done when a force moves an object.',
+      body: [
+        'Energy is the ability to do work, and work is done when a force moves an object. If you lift a bag onto a table, you do work against gravity, and the bag gains gravitational potential energy. Push a box across the floor and you do work against friction.',
+        'Energy comes in many forms. Kinetic energy is the energy of movement: a moving car has more kinetic energy than a slow one, and a heavy object has more than a light one at the same speed. Potential energy is stored energy, such as a stretched spring or water held behind a dam.',
+        'Energy cannot be created or destroyed, only changed from one form to another. A falling ball turns potential energy into kinetic energy. A bulb turns electrical energy into light and heat. In every change, some energy is wasted as heat, which is why machines are never 100 percent efficient.',
+      ],
     },
     {
       id: 'phy-3',
       title: 'Light and Reflection',
       summary:
         'How light travels in straight lines, reflects from mirrors, and forms images. Includes the laws of reflection.',
+      body: [
+        'Light travels in straight lines at about 300,000 kilometres per second in empty space. We see objects because light bounces off them and into our eyes. When light hits a smooth surface like a mirror, it reflects in a regular way and forms a clear image.',
+        'The laws of reflection are simple. The angle of incidence — the angle between the incoming ray and the normal line — equals the angle of reflection. The incoming ray, the reflected ray and the normal all lie in the same plane. That is why a mirror image looks the same size as you and the same distance behind the mirror.',
+        'A plane mirror makes a virtual image: it looks real, but no light actually comes from behind the mirror. Curved mirrors behave differently — a concave mirror can focus light to a point, which is why it is used in car headlights and telescopes, while a convex mirror spreads light out and is used as a safety mirror in shops.',
+      ],
     },
     {
       id: 'phy-4',
       title: 'Electricity and Circuits',
       summary:
         'Current, voltage and resistance, series and parallel circuits, and how a simple circuit with a battery and bulb works.',
+      body: [
+        'Electricity is the flow of electric charge, usually electrons moving through a metal wire. Three ideas describe any circuit: current, the amount of charge flowing each second, measured in amperes; voltage, the push that drives the current, measured in volts; and resistance, which opposes the flow, measured in ohms.',
+        'They are linked by Ohm\'s law: voltage = current times resistance (V = I x R). Raise the voltage and more current flows, so a bulb glows brighter. Add resistance and the current falls, so the bulb gets dimmer. That is exactly what you can test in the Virtual Lab circuit simulator.',
+        'In a series circuit the same current flows through every part, so if one bulb breaks, all of them go out. In a parallel circuit the current splits between branches, so each bulb gets the full voltage and one bulb can fail while the others stay lit. That is why the lights in a house are wired in parallel.',
+      ],
     },
   ],
   Chemistry: [
@@ -148,24 +212,44 @@ export const chapters: Record<string, Chapter[]> = {
       title: 'Atoms and Molecules',
       summary:
         'Atoms are the building blocks of matter. Learn about protons, neutrons and electrons, and how atoms join to form molecules.',
+      body: [
+        'Everything around you is made of atoms, the tiny building blocks of matter. An atom has a small, heavy nucleus at its centre, made of protons with a positive charge and neutrons with no charge, and electrons with a negative charge moving around it.',
+        'The number of protons is the atomic number, and it decides which element the atom is: 1 proton is hydrogen, 6 is carbon, 8 is oxygen. Atoms of the same element have the same number of protons but can have different numbers of neutrons; those versions are called isotopes.',
+        'Atoms rarely stay alone. They join together to form molecules, such as two hydrogen atoms and one oxygen atom making a water molecule, H2O. A molecule is the smallest unit of a substance that still has that substance\'s properties — break it apart and the properties change.',
+      ],
     },
     {
       id: 'chem-2',
       title: 'Chemical Bonding',
       summary:
         'How atoms stick together through ionic and covalent bonds, and why water, salt and carbon dioxide behave differently.',
+      body: [
+        'Atoms join together because they want a full outer shell of electrons. They do this in two main ways. In an ionic bond, one atom gives an electron to another, so both become charged ions that attract each other — this is how sodium and chlorine form salt.',
+        'In a covalent bond, atoms share electrons instead of giving them away. Two hydrogen atoms share one pair of electrons to form H2, and in water each hydrogen shares a pair with oxygen. Covalent bonds hold together most of the molecules in living things, from sugar to DNA.',
+        'The kind of bond decides how a substance behaves. Ionic compounds like salt are hard crystals that dissolve in water and conduct electricity when melted. Covalent molecules like water and carbon dioxide are usually gases or liquids, and they do not conduct electricity.',
+      ],
     },
     {
       id: 'chem-3',
       title: 'Acids, Bases and Salts',
       summary:
         'What makes a substance acidic or basic, the pH scale, neutralisation, and everyday examples such as lemon juice and soap.',
+      body: [
+        'Acids are substances that release hydrogen ions in water and taste sour — lemon juice contains citric acid and vinegar contains acetic acid. Bases are the opposite: they feel soapy and can neutralise acids. Alkalis are bases that dissolve in water, such as soap solution.',
+        'The pH scale measures how acidic or basic a solution is, from 0 to 14. A pH below 7 is acidic, 7 is neutral, and above 7 is basic. Strong acids like stomach acid have a very low pH, while washing soda has a high pH. Litmus paper turns red in acid and blue in a base.',
+        'When an acid and a base mix, they neutralise each other and make a salt and water. For example, hydrochloric acid plus sodium hydroxide gives sodium chloride — common salt — plus water. Farmers use lime, a base, to neutralise acidic soil, and antacid tablets calm excess stomach acid the same way.',
+      ],
     },
     {
       id: 'chem-4',
       title: 'The Periodic Table',
       summary:
         'How elements are arranged by atomic number into groups and periods, and what the table tells us about each element.',
+      body: [
+        'The periodic table arranges all known elements by atomic number, from hydrogen (1) to the heaviest elements. Elements in the same vertical column, called a group, have similar properties because their atoms have the same number of electrons in the outer shell.',
+        'Rows are called periods. As you move across a period, the atoms get one more proton and one more electron, and the properties change gradually from metals on the left to non-metals on the right. The table also separates metals, non-metals and the noble gases, which barely react at all.',
+        'The table is a map, not just a list. Find an element and you can predict its behaviour: Group 1 metals like sodium react violently with water, Group 17 halogens like chlorine are reactive non-metals, and Group 18 noble gases like argon are unreactive. Mendeleev built the first version in 1869 and even left gaps for elements nobody had found yet.',
+      ],
     },
   ],
   Mathematics: [
@@ -174,24 +258,44 @@ export const chapters: Record<string, Chapter[]> = {
       title: 'Algebra Basics',
       summary:
         'Using letters to stand for unknown numbers, simplifying expressions, and solving simple equations step by step.',
+      body: [
+        'Algebra is arithmetic with letters standing for unknown numbers. The letter, called a variable, can stand for any value: in x + 5 = 12, x must be 7. Using letters lets us write rules that work for many numbers at once, such as the area of a rectangle, A = l x w.',
+        'The first skill is simplifying expressions. Terms with the same letter can be combined: 3x + 2x = 5x, but 3x + 2y stays as it is. Brackets are expanded by multiplying each term inside, so 2(x + 3) = 2x + 6.',
+        'To solve an equation, do the same thing to both sides until the letter stands alone. For 2x + 3 = 11, subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Always check your answer by putting it back into the original equation.',
+      ],
     },
     {
       id: 'math-2',
       title: 'Fractions and Decimals',
       summary:
         'What fractions mean, how to add, subtract, multiply and divide them, and how to convert between fractions and decimals.',
+      body: [
+        'A fraction is a part of a whole: in 3/4, the bottom number (the denominator) says the whole is split into 4 equal parts, and the top number (the numerator) says we have 3 of them. The same value can be written in many ways — 1/2, 2/4 and 3/6 are all the same.',
+        'To add or subtract fractions you need the same denominator. For 1/3 + 1/6, change 1/3 to 2/6, then add the tops: 2/6 + 1/6 = 3/6 = 1/2. To multiply, multiply the tops and the bottoms: 2/3 x 3/5 = 6/15 = 2/5. To divide, flip the second fraction and multiply.',
+        'Fractions and decimals are two ways of writing the same idea. Divide the top by the bottom: 1/4 = 0.25, 3/10 = 0.3. Some fractions never end as decimals — 1/3 = 0.333... — so we round them. Use fractions when you need an exact answer and decimals when you need a quick estimate.',
+      ],
     },
     {
       id: 'math-3',
       title: 'Geometry: Triangles and Circles',
       summary:
         'Angles, types of triangles, the area and perimeter of shapes, and the parts of a circle: radius, diameter and circumference.',
+      body: [
+        'Geometry is the study of shapes and angles. A triangle has three sides and its three interior angles always add up to 180 degrees. Triangles are named by their sides and angles: equilateral (all sides equal), isosceles (two sides equal) and scalene (all sides different).',
+        'The area of a triangle is half x base x height, and the perimeter is the sum of its sides. For a rectangle, area is length x width. For a circle, the radius is the distance from the centre to the edge, the diameter is twice the radius, and the circumference is pi x diameter.',
+        'The most famous circle rule is that the area of a circle is pi x r squared, where r is the radius. Angles on a straight line add to 180 degrees, and angles around a point add to 360 degrees. Knowing these facts lets you work out missing angles without measuring them.',
+      ],
     },
     {
       id: 'math-4',
       title: 'Ratios and Percentages',
       summary:
         'Comparing quantities with ratios, converting ratios to percentages, and solving everyday percentage problems.',
+      body: [
+        'A ratio compares two quantities: the ratio 2:3 means for every 2 of one thing there are 3 of another. Ratios must use the same units, and they are usually written in simplest form — 10:15 simplifies to 2:3 by dividing both sides by 5.',
+        'Percent means out of 100. To turn a fraction into a percentage, multiply by 100: 3/4 = 75%. To find 20% of 80, work out 0.20 x 80 = 16. Percentages are everywhere in real life — discounts in shops, marks in exams and interest in banks.',
+        'Ratios and percentages work together in problems. If a class has boys and girls in the ratio 3:2 and there are 30 students, split 30 into 5 parts (3 + 2), so each part is 6 — that gives 18 boys and 12 girls. Always check that your answer adds up to the total.',
+      ],
     },
   ],
   English: [
@@ -200,24 +304,44 @@ export const chapters: Record<string, Chapter[]> = {
       title: 'Grammar: Tenses',
       summary:
         'Present, past and future tenses, when to use each one, and how to form them correctly in sentences.',
+      body: [
+        'English verbs change their form to show time, and these forms are called tenses. The present tense talks about now or about habits: \'She plays football every Sunday.\' The past tense talks about finished time: \'She played yesterday.\' The future tense talks about what will happen: \'She will play tomorrow.\'',
+        'Each tense also has a continuous form for actions in progress and a perfect form for completed actions. \'I am reading\' is present continuous, \'I was reading\' is past continuous, and \'I have read\' is present perfect. Choosing the right form tells the reader exactly when something happened.',
+        'The most common mistake is mixing tenses in one sentence. Keep the time the same unless the meaning changes: \'When I arrived, she was cooking\' uses past simple for the arrival and past continuous for the action already in progress. Read your sentences aloud — if the time jumps around, the tense probably has too.',
+      ],
     },
     {
       id: 'eng-2',
       title: 'Reading Comprehension',
       summary:
         'How to read a passage carefully, find the main idea, and answer questions using evidence from the text.',
+      body: [
+        'Reading comprehension means understanding a passage, not just reading the words. Start by reading the whole passage once without stopping, to get the main idea. Then read the questions so you know what to look for, and read the passage again slowly.',
+        'Find the main idea first — what is the writer really trying to say? Then look for supporting details: facts, examples and reasons. Many questions ask you to find evidence in the text, so underline the sentence that proves your answer instead of guessing from memory.',
+        'Some questions ask you to infer — to work out what the writer means without saying it directly. Use the clues in the text plus what you already know. If two answers both look possible, choose the one the text supports with evidence, not the one that sounds clever.',
+      ],
     },
     {
       id: 'eng-3',
       title: 'Essay Writing',
       summary:
         'Planning an essay with an introduction, body paragraphs and a conclusion, and writing clearly in your own words.',
+      body: [
+        'A good essay has three parts. The introduction tells the reader what you will write about and gives your main idea in one clear sentence. The body paragraphs each make one point, with an example or reason to support it. The conclusion sums up the points and restates the main idea.',
+        'Plan before you write. Write a short outline: your main idea, then two or three points with an example for each. This takes five minutes but saves you from getting stuck halfway. One paragraph should contain one idea — when the idea changes, start a new paragraph.',
+        'Write in your own words and keep sentences short and clear. After writing, read your essay aloud and fix any sentence that sounds wrong. Check spelling and punctuation last, and ask yourself: does every paragraph support my main idea? If a sentence does not, cut it out.',
+      ],
     },
     {
       id: 'eng-4',
       title: 'Vocabulary Building',
       summary:
         'Learning new words through roots, prefixes and suffixes, synonyms and antonyms, and using words correctly.',
+      body: [
+        'A bigger vocabulary makes reading easier and writing stronger. The best way to learn new words is to read widely and to look up every word you do not know. Write it down with its meaning and one example sentence of your own — that is how the word sticks.',
+        'Word parts are shortcuts. A prefix comes at the start: \'un-\' means not (unhappy), \'re-\' means again (rewrite). A suffix comes at the end: \'-ful\' means full of (careful), \'-less\' means without (careless). If you know the parts, you can guess many new words.',
+        'Synonyms are words with similar meanings, like happy and joyful, and antonyms are opposites, like hot and cold. But synonyms are rarely exact: \'big\', \'huge\' and \'enormous\' all mean large, but each fits a different sentence. Use a new word three times in real sentences and it becomes yours.',
+      ],
     },
   ],
   'Computer Science': [
@@ -226,24 +350,44 @@ export const chapters: Record<string, Chapter[]> = {
       title: 'What is a Computer?',
       summary:
         'The parts of a computer: input, processing, storage and output, and how hardware and software work together.',
+      body: [
+        'A computer is a machine that follows instructions to process information. It works in four stages: input, processing, storage and output. You give it data through input devices like a keyboard or mouse, it processes the data, stores the results, and shows them on an output device like a screen.',
+        'Hardware is the parts you can touch — the processor (CPU), memory (RAM), hard drive and screen. The CPU is the brain: it carries out billions of tiny instructions every second. RAM is short-term memory that is wiped when the computer switches off, while the hard drive keeps your files permanently.',
+        'Software is the programs that tell the hardware what to do, from the operating system to apps and games. Without software, hardware is just metal and plastic. Together they let you write, calculate, draw, play music and talk to people on the other side of the world.',
+      ],
     },
     {
       id: 'cs-2',
       title: 'Programming Basics',
       summary:
         'What a program is, variables, inputs and outputs, and how to think in steps like a programmer.',
+      body: [
+        'A program is a set of step-by-step instructions that tells a computer exactly what to do. Writing a program is called coding, and the most important skill is not typing — it is thinking in steps, breaking a big problem into small steps the computer can follow.',
+        'Programs are built from a few basic ideas. Variables store values, such as a player\'s score. An \'if\' statement lets the program make a choice, and a loop repeats instructions, such as drawing the same shape ten times. Inputs and outputs let the program talk to the user.',
+        'Programs almost never work first time, and fixing them is called debugging. Good programmers test small pieces, read error messages carefully, and fix one thing at a time. Every app on your phone, from games to maps, was built this way — one small step at a time.',
+      ],
     },
     {
       id: 'cs-3',
       title: 'Internet and Safety',
       summary:
         'How the internet works, staying safe online, strong passwords, and what to do about strangers and scams.',
+      body: [
+        'The internet connects computers all over the world, so a message can travel from your phone to another country in less than a second. It works through networks of cables, Wi-Fi and servers — big computers that store websites and send them to you when you ask.',
+        'Staying safe online starts with strong passwords: long, different for every account, and never shared with friends. Never share your full name, address, school or photos with strangers online, and remember that people can pretend to be someone else.',
+        'If a message, link or offer feels wrong, stop and tell an adult you trust. Do not click links from strangers, do not download files you were not expecting, and be kind online — anything you post can be copied and kept forever, even if you delete it.',
+      ],
     },
     {
       id: 'cs-4',
       title: 'Data and Binary Numbers',
       summary:
         'How computers store everything as 0s and 1s, what bits and bytes are, and how to count in binary.',
+      body: [
+        'Computers store everything as 0s and 1s, because their circuits can only be on or off. This system is called binary. Each 0 or 1 is called a bit, and eight bits together make one byte — enough to store one character, such as the letter A.',
+        'Counting in binary works like counting in decimal, but each place is worth twice the one before it: 1, 2, 4, 8, 16 and so on. The binary number 101 means 4 + 0 + 1 = 5, and 1010 means 8 + 0 + 2 + 0 = 10. Try it: what is 1101 in decimal? (It is 13.)',
+        'Everything in a computer is built from binary: numbers, letters, pictures and sound. A picture is a grid of pixels, and each pixel\'s colour is stored as binary numbers. A song is thousands of tiny binary samples of sound. That is why more storage and faster memory make a computer better.',
+      ],
     },
   ],
 }
@@ -257,6 +401,8 @@ export type Lecture = {
   summary: string
   points: string[]
   body: string[]
+  videoId?: string
+  videoNote?: string
 }
 
 export const lectures: Lecture[] = [
@@ -266,6 +412,8 @@ export const lectures: Lecture[] = [
     title: 'Photosynthesis: How Plants Make Food',
     duration: '12 min',
     level: 'Beginner',
+    videoId: 'uixA8ZXx0KU',
+    videoNote: 'Watch: Photosynthesis by Amoeba Sisters on YouTube. Also see the Khan Academy overview: https://www.youtube.com/watch?v=-rsYk4eCKnA',
     summary: 'Sunlight, water and carbon dioxide become food and oxygen inside a leaf.',
     points: [
       'Photosynthesis happens in the chloroplast, in a green pigment called chlorophyll.',
@@ -815,3 +963,98 @@ export const moleculeParts: ModelPart[] = [
   { id: 'o', label: 'Oxygen (O)', desc: 'The gas we breathe. It has 8 protons. One oxygen atom joins two hydrogen atoms to make water.' },
   { id: 'c', label: 'Carbon (C)', desc: 'The backbone of living things. One carbon plus two oxygen atoms makes carbon dioxide, CO2.' },
 ]
+
+export type ModelInfo = {
+  title: string
+  intro: string
+  points: string[]
+}
+
+export const modelInfo: Record<'cell' | 'heart' | 'molecule' | 'motion', ModelInfo> = {
+  cell: {
+    title: 'Animal Cell',
+    intro: 'An animal cell is the smallest unit of animal life. Every cell takes in food, releases energy, gets rid of waste and can divide to make new cells. Tap each part of the diagram to learn what it does.',
+    points: [
+      'Nucleus — the control centre. It holds DNA, the instructions for making proteins and running the cell.',
+      'Mitochondria — the powerhouse. They release energy from glucose during respiration.',
+      'Cell membrane — the thin skin around the cell. It controls what enters and leaves.',
+      'Cytoplasm — the jelly filling the cell, where most chemical reactions happen.',
+      'Vacuole — a storage sac filled with cell sap.',
+    ],
+  },
+  heart: {
+    title: 'Human Heart',
+    intro: 'Your heart is about the size of your fist and beats around 70 times a minute. It is really two pumps joined together: the right side sends blood to the lungs, and the left side sends it to the whole body.',
+    points: [
+      'Right atrium — receives blood low in oxygen from the body.',
+      'Right ventricle — pumps that blood to the lungs to pick up oxygen.',
+      'Left atrium — receives oxygen-rich blood back from the lungs.',
+      'Left ventricle — the strongest chamber. It pumps oxygen-rich blood to the whole body.',
+      'Valves — flaps that stop blood flowing backwards, so it only moves in one direction.',
+    ],
+  },
+  molecule: {
+    title: 'Water Molecule',
+    intro: 'A molecule is two or more atoms joined by a chemical bond. Water is the most important molecule for life: two hydrogen atoms joined to one oxygen atom, written H2O.',
+    points: [
+      'Oxygen (O) — the large red atom in the middle.',
+      'Hydrogen (H) — the two small white atoms.',
+      'Covalent bonds — the atoms share electrons to stay together.',
+      'H2O has a bent shape, about 104.5 degrees between the hydrogen atoms.',
+    ],
+  },
+  motion: {
+    title: 'Motion and Gravity',
+    intro: 'Gravity pulls everything towards the Earth at 9.8 metres per second squared. Drop any object and it speeds up as it falls — a heavier object does not fall faster than a light one.',
+    points: [
+      'Fall time = square root of (2 x height / 9.8).',
+      'Landing speed = square root of (2 x 9.8 x height).',
+      'Double the height and the landing speed grows — but not by double.',
+      'Try the slider: compare a 2 m drop with an 8 m drop.',
+    ],
+  },
+}
+
+export type LabGuide = {
+  title: string
+  intro: string
+  steps: string[]
+  tryThis: string
+}
+
+export const labGuides: Record<'circuit' | 'cell' | 'molecule', LabGuide> = {
+  circuit: {
+    title: 'Circuit Simulator',
+    intro: 'A battery, a wire and a bulb. Change the voltage and flip the switch — the bulb brightness and the current change with it. Resistance is fixed at 10 ohms.',
+    steps: [
+      'Move the voltage slider to 6 V.',
+      'Make sure the switch is ON and watch the bulb glow.',
+      'Raise the voltage to 12 V — the bulb gets brighter and the current rises.',
+      'Lower it to 2 V — the bulb goes dim.',
+      'Flip the switch OFF — the circuit breaks and the current becomes 0 A.',
+    ],
+    tryThis: 'Set 12 V, then 3 V. How much dimmer is the bulb? Current = voltage / 10 ohms, so at 12 V it is 1.2 A and at 3 V only 0.3 A.',
+  },
+  cell: {
+    title: 'Cell Explorer',
+    intro: 'Explore a living cell without a microscope. Tap each part of the diagram to learn what it does.',
+    steps: [
+      'Tap the large purple circle — the nucleus.',
+      'Tap the orange ovals — the mitochondria.',
+      'Tap the blue circle — the vacuole.',
+      'Tap the edge of the cell — the membrane.',
+    ],
+    tryThis: 'Find the part that releases energy from food. That is the mitochondria — the powerhouse of the cell.',
+  },
+  molecule: {
+    title: 'Molecule Builder',
+    intro: 'Build molecules atom by atom and see which molecule you made. Atoms join by sharing or giving away electrons.',
+    steps: [
+      'Tap + Hydrogen twice, then + Oxygen once.',
+      'Read the formula — you built water, H2O.',
+      'Tap Clear and add 1 carbon + 2 oxygen for carbon dioxide.',
+      'Try 1 carbon + 4 hydrogen for methane, CH4.',
+    ],
+    tryThis: 'Can you build oxygen gas, O2? Add two oxygen atoms and nothing else.',
+  },
+}
