@@ -6,3 +6,59 @@
 @media(max-width:1100px){.sidebar{width:225px}.main-area{margin-left:225px;width:calc(100% - 225px)}.page-wrap{padding:25px 22px}.hero-art{right:2%;opacity:.7}.stats-grid{grid-template-columns:repeat(2,1fr)}.content-grid{grid-template-columns:1fr}.feature-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.sidebar{transform:translateX(-100%);transition:transform .25s;width:270px}.sidebar.sidebar-open{transform:translateX(0)}.close-menu{display:grid;margin-left:auto}.scrim{display:block;position:fixed;inset:0;background:#020611aa;border:0;z-index:15}.main-area{margin-left:0;width:100%}.topbar{height:60px;padding:0 14px;gap:10px}.menu-toggle{display:grid}.breadcrumb{margin-right:auto;font-size:10px}.search-box{width:34px;border:0;background:transparent;padding:0}.search-box input{display:none}.top-actions{gap:9px}.page-wrap{padding:18px 14px 35px}.hero{padding:25px 22px;min-height:300px}.hero-content{max-width:100%}.hero h1{font-size:39px}.hero p{max-width:290px;font-size:12px}.hero-art{right:-105px;opacity:.27}.hero-actions{flex-wrap:wrap}.section-head{align-items:flex-start;gap:10px;flex-direction:column}.section-head h2{font-size:22px}.board-pill{font-size:9px}.stats-grid{gap:9px}.stat-card{padding:12px;min-height:98px}.stat-card>strong{font-size:15px}.stat-top{font-size:9px}.subject-grid{grid-template-columns:repeat(2,1fr)}.panel{padding:14px}.wide-cta{align-items:flex-start;flex-wrap:wrap}.wide-cta>div:nth-child(2){min-width:calc(100% - 60px)}.wide-cta .btn-primary{margin-left:52px}.footer{padding:15px;font-size:9px}.footer span{float:none;display:block;margin-top:5px}.page-heading h1{font-size:26px}.library-grid,.feature-grid{grid-template-columns:repeat(2,1fr)}.book-cover{height:110px}.book-meta{padding:10px}.book-meta p{font-size:9px}.feature-card{padding:13px;min-height:200px}.feature-card h3{font-size:13px}.feature-card p{font-size:9px}}
 @media(max-width:390px){.hero h1{font-size:34px}.library-grid,.feature-grid{grid-template-columns:1fr}.subject-grid{gap:7px}.subject-card{padding:10px}.stats-grid{grid-template-columns:repeat(2,1fr)}.top-avatar{display:none}}
+
+/* --- EduVerse functional additions --- */
+.notif-panel{position:absolute;right:0;top:46px;width:280px;background:#0e182a;border:1px solid #263750;border-radius:12px;padding:14px;z-index:30;box-shadow:0 12px 30px #00000066;text-align:left}
+.notif-panel strong{font-size:12px;color:#e8f1ff}
+.notif-panel p{font-size:11px;color:#9bb9e9;margin:6px 0}
+.check-btn{border:1px solid #344966;background:transparent;color:#a9d3ff;border-radius:8px;padding:7px 11px;font-size:10px;font-weight:700;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.check-btn.done{background:#1d5c3a33;border-color:#36d69b;color:#5ee8b0}
+.check-btn.big{padding:11px 16px;font-size:11px}
+.filter-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chip{border:1px solid #2b3c58;background:#111e32;color:#c8d6e9;border-radius:20px;padding:8px 13px;font-size:11px;display:inline-flex;align-items:center;gap:6px}
+.chip-active{background:linear-gradient(100deg,#4d8dff,#7867ed);border-color:transparent;color:#fff}
+.chapter-list{padding:0 14px 14px}
+.chapter-row{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;padding:12px 0;border-top:1px solid #1d2a40}
+.chapter-row strong{font-size:12px;color:#e8f1ff}
+.chapter-row p{font-size:11px;line-height:1.6;color:#8495af;margin:5px 0 0}
+.lesson-detail h3{font:600 16px 'Space Grotesk';color:#e9f3ff;margin:20px 0 8px}
+.lesson-detail ul{margin:0;padding-left:20px}
+.lesson-detail li{font-size:12px;line-height:1.8;color:#c8d6e9}
+.lesson-detail p{font-size:12px;line-height:1.8;color:#b7c7df}
+.demo-note{display:flex;gap:8px;align-items:center;background:#14264d;border:1px solid #2b3f61;border-radius:10px;padding:11px 14px;font-size:11px;color:#b7c7df;margin-bottom:14px}
+.suggest-row{display:flex;gap:8px;flex-wrap:wrap;padding:12px 17px 0}
+.note-form h3{font:600 15px 'Space Grotesk';margin:0 0 12px}
+.form-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.input,.select,.textarea{background:#111e32;border:1px solid #2b3c58;color:#e8f2ff;border-radius:8px;padding:10px 12px;font-size:12px}
+.input{flex:1;min-width:180px}
+.textarea{width:100%;margin-top:10px;resize:vertical;font:inherit}
+.outline-btn.danger{color:#ff9a9a;border-color:#7a3a3a}
+.notes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+.note-card{background:#0e182a;border:1px solid #1f2d45;border-radius:12px;padding:16px}
+.note-card p{font-size:11px;line-height:1.7;color:#b7c7df;white-space:pre-line}
+.quiz-options{display:grid;gap:10px;margin:16px 0}
+.quiz-option{text-align:left;background:#121f34;border:1px solid #263750;border-radius:10px;padding:13px;color:#fff;font-size:12px;display:flex;gap:10px;align-items:center}
+.quiz-option-selected{border-color:#4d8dff;background:#1d3a6e}
+.quiz-letter{width:26px;height:26px;border-radius:8px;background:#263d66;display:grid;place-items:center;font-weight:700;flex-shrink:0}
+.review-row{padding:14px 0;border-top:1px solid #1d2a40}
+.review-row p{font-size:11px;line-height:1.6;color:#b7c7df}
+.good{color:#5ee8b0}
+.bad{color:#ff9a9a}
+.model-wrap{background:#0e182a;border:1px solid #1f2d45;border-radius:12px;padding:18px}
+.model-svg{width:100%;max-width:520px;display:block;margin:0 auto}
+.part-list{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:14px 0}
+.info-panel{background:#111e32;border:1px solid #2b3c58;border-radius:10px;padding:14px;max-width:640px;margin:0 auto}
+.info-panel h3{margin:0 0 6px;font:600 15px 'Space Grotesk';color:#e9f3ff}
+.info-panel p{margin:0;font-size:12px;line-height:1.7;color:#b7c7df}
+.lab-controls{max-width:520px;margin:16px auto 0}
+.lab-controls label{font-size:12px;color:#c8d6e9}
+.lab-controls input[type=range]{width:100%;margin:10px 0}
+.lab-controls p{font-size:12px;color:#b7c7df;line-height:1.7}
+.molecule-result{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.molecule-result div{background:#111e32;border:1px solid #2b3c58;border-radius:10px;padding:12px}
+.molecule-result small{display:block;font-size:9px;letter-spacing:1.5px;color:#72839f;margin-bottom:6px}
+.molecule-result strong{font-size:13px;color:#e8f1ff}
+.subject-progress{padding:12px 0;border-top:1px solid #1d2a40}
+.subject-progress-head{display:flex;justify-content:space-between;font-size:12px;color:#c8d6e9;margin-bottom:8px}
+.done-label{color:#5ee8b0;border-color:#2c6b4a}
+@media(max-width:760px){.notes-grid{grid-template-columns:1fr}.molecule-result{grid-template-columns:1fr}.notif-panel{width:240px}}
